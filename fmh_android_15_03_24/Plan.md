@@ -158,50 +158,49 @@
   - О приложении: проверка версии, Intent-тест на открытие браузера
 
 ### 4.3 Пример теста для Espresso (Kotlin)
-
-```kotlin
 @Test
 fun createNews_validData_success() {
-    onView(withId(R.id.button_create_news)).perform(click())
-    onView(withId(R.id.category_spinner)).perform(click())
-    onView(withText("Праздник")).perform(click())
-    onView(withId(R.id.title_input)).perform(typeText("День медсестры"), closeSoftKeyboard())
-    onView(withId(R.id.description_input)).perform(typeText("Поздравляем всех!"))
-    onView(withId(R.id.save_button)).perform(click())
-    onView(withText("День медсестры")).check(matches(isDisplayed()))
+onView(withId(R.id.button_create_news)).perform(click())
+onView(withId(R.id.category_spinner)).perform(click())
+onView(withText("Праздник")).perform(click())
+onView(withId(R.id.title_input)).perform(typeText("День медсестры"), closeSoftKeyboard())
+onView(withId(R.id.description_input)).perform(typeText("Поздравляем всех!"))
+onView(withId(R.id.save_button)).perform(click())
+onView(withText("День медсестры")).check(matches(isDisplayed()))
 }
+
+text
+
 ### 4.4 Работа с нестабильностью (Flakiness)
-Использовать IdlingResource для ожидания загрузки данных из API
 
-Для тестов с датой/временем — внедрение зависимостей (подменить Clock на фиксированную дату)
-
-Для фильтрации — подготовить тестовые данные через API (clean state перед тестом)
+- Использовать IdlingResource для ожидания загрузки данных из API
+- Для тестов с датой/временем — внедрение зависимостей (подменить Clock на фиксированную дату)
+- Для фильтрации — подготовить тестовые данные через API (clean state перед тестом)
 
 ### 4.5 CI/CD (рекомендация)
-Запуск автотестов на каждый Pull Request
 
-Ночные прогоны полного набора
-
-Интеграция с Allure для просмотра истории прогонов
+- Запуск автотестов на каждый Pull Request
+- Ночные прогоны полного набора
+- Интеграция с Allure для просмотра истории прогонов
 
 ## 5. Используемые устройства и инструменты
-Категория	Инструмент / Устройство
-ОС	Windows 10 Home
-IDE	Android Studio Meerkat (2024.3.1 Patch 1)
-Эмулятор	Android API 29 (Pixel 4 / Nexus 5X)
-Реальное устройство	(рекомендуется) Samsung Galaxy S21 / Google Pixel 6 (Android 13-14)
-Прокси / сниффинг	Charles Proxy
-UI-автоматизация	Espresso Testing Framework + Kotlin
-Отчеты	Allure Framework
-Модульное тестирование	JUnit5, MockK
-API-мокирование	MockWebServer (OkHttp)
+
+| Категория | Инструмент / Устройство |
+|-----------|--------------------------|
+| ОС | Windows 10 Home |
+| IDE | Android Studio Meerkat (2024.3.1 Patch 1) |
+| Эмулятор | Android API 29 (Pixel 4 / Nexus 5X) |
+| Реальное устройство | (рекомендуется) Samsung Galaxy S21 / Google Pixel 6 (Android 13-14) |
+| Прокси / сниффинг | Charles Proxy |
+| UI-автоматизация | Espresso Testing Framework + Kotlin |
+| Отчеты | Allure Framework |
+| Модульное тестирование | JUnit5, MockK |
+| API-мокирование | MockWebServer (OkHttp) |
+
 ## 6. Критерии качества (Definition of Done для тестирования)
-Функциональные тесты (ручные) — 100% покрытие чеклиста из п.3
 
-Автотесты — проходят на эмуляторе и реальном устройстве без ошибок (стабильность > 98%)
-
-Отчет Allure — содержит скриншоты упавших тестов и логи
-
-Исследовательское тестирование — не выявило критических багов (crash, data loss)
-
-UI-тесты — покрывают минимум: авторизацию, CRUD новостей, фильтрацию, аккордеон
+- Функциональные тесты (ручные) — 100% покрытие чеклиста из п.3
+- Автотесты — проходят на эмуляторе и реальном устройстве без ошибок (стабильность > 98%)
+- Отчет Allure — содержит скриншоты упавших тестов и логи
+- Исследовательское тестирование — не выявило критических багов (crash, data loss)
+- UI-тесты — покрывают минимум: авторизацию, CRUD новостей, фильтрацию, аккордеон
