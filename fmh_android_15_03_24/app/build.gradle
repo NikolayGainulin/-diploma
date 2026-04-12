@@ -19,6 +19,7 @@ android {
         targetSdkVersion 32
         versionCode 14
         versionName "1.0.0"
+        testInstrumentationRunner "io.qameta.allure.android.runners.AllureAndroidJUnitRunner"
     }
 
     compileOptions {
@@ -91,4 +92,27 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:29.0.3')
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-crashlytics-ktx'
+
+    def espresso_version = '3.5.0-alpha04'
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-accessibility:$espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-web:$espresso_version"
+    androidTestImplementation "androidx.test.espresso.idling:idling-concurrent:$espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-idling-resource:$espresso_version"
+
+    def allure_version = '2.4.0'
+    androidTestImplementation "io.qameta.allure:allure-kotlin-android:$allure_version"
+    androidTestImplementation "io.qameta.allure:allure-kotlin-model:$allure_version"
+    androidTestImplementation "io.qameta.allure:allure-kotlin-commons:$allure_version"
+    androidTestImplementation "io.qameta.allure:allure-kotlin-junit4:$allure_version"
+    androidTestImplementation "junit:junit:4.13.2"
+
+    androidTestImplementation "androidx.test:rules:1.5.0"
+    androidTestImplementation "androidx.test:runner:1.5.2"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    implementation "joda-time:joda-time:2.12.1"
+
+    androidTestUtil "androidx.test:orchestrator:1.4.2"
 }

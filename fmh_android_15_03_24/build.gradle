@@ -26,6 +26,12 @@ allprojects {
         mavenCentral()
         google()
     }
+
+    buildscript {
+        dependencies {
+            classpath "io.qameta.allure:allure-gradle:2.11.2" // или новее версию
+        }
+    }
 }
 
 task clean(type: Delete) {
