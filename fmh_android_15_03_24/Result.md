@@ -12,11 +12,11 @@
 
 ### Скриншоты отчёта Allure
 
-![Общий отчёт Allure – часть 1](https://github.com/NikolayGainulin/-diploma/tree/main/fmh_android_15_03_24/screenshot/Allure-1.png?raw=true)
-![Общий отчёт Allure – часть 2](https://github.com/NikolayGainulin/-diploma/tree/main/fmh_android_15_03_24/Allure-2.png?raw=true)
-![Общий отчёт Allure – часть 3](https://github.com/NikolayGainulin/-diploma/tree/main/fmh_android_15_03_24/Allure-3.png?raw=true)
+![Общий отчёт Allure – часть 1](https://github.com/NikolayGainulin/-diploma/blob/main/fmh_android_15_03_24/screenshot/Allure-1.png)
+![Общий отчёт Allure – часть 2](https://github.com/NikolayGainulin/-diploma/blob/main/fmh_android_15_03_24/screenshot/Allure-2.png)
+![Общий отчёт Allure – часть 3](https://github.com/NikolayGainulin/-diploma/blob/main/fmh_android_15_03_24/screenshot/Allure-3.png)
 
-📊 [Полный Allure-отчёт (архив)](https://github.com/NikolayGainulin/-diploma/tree/main/fmh_android_15_03_24/allure-results.zip)
+📊 [Полный Allure-отчёт (архив)](https://github.com/NikolayGainulin/-diploma/blob/main/fmh_android_15_03_24/allure-results.zip)
 
 ## Сравнение трудозатрат при ручном и автоматизированном тестировании
 
