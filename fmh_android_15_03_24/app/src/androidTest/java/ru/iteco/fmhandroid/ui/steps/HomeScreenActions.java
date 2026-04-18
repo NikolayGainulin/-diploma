@@ -55,4 +55,12 @@ public class HomeScreenActions {
         Allure.step("Переход ко всем новостям");
         homeScreen.viewAllNewsLink.perform(click());
     }
+    public void navigateToHomeScreen() {
+        Allure.step("Возврат на главный экран");
+        try {
+            navigationMenuButton.perform(click());
+            homeMenuItem.perform(click());
+        } catch (Exception e) {
+            // Already on home screen or menu not available
+        }
 }
